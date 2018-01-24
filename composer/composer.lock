@@ -1079,12 +1079,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/inhere/php-validate.git",
-                "reference": "0232052ca166a88f02c7a686e4955a303f3c5cc3"
+                "reference": "fc1cf90a6d5537ee1228d312a809cdaa6b5329f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/inhere/php-validate/0232052ca166a88f02c7a686e4955a303f3c5cc3.zip",
-                "reference": "0232052ca166a88f02c7a686e4955a303f3c5cc3",
+                "url": "https://files.phpcomposer.com/files/inhere/php-validate/fc1cf90a6d5537ee1228d312a809cdaa6b5329f1.zip",
+                "reference": "fc1cf90a6d5537ee1228d312a809cdaa6b5329f1",
                 "shasum": ""
             },
             "require": {
@@ -1116,7 +1116,7 @@
                 "library",
                 "validate"
             ],
-            "time": "2018-01-13T05:29:47+00:00"
+            "time": "2018-01-24T05:48:07+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
