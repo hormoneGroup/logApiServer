@@ -14,6 +14,10 @@ namespace Inhere\Validate\Utils;
  */
 class Helper
 {
+    const IS_TRUE = '|yes|on|1|true|';
+    const IS_FALSE = '|no|off|0|false|';
+    const IS_BOOL = '|yes|on|1|true|no|off|0|false|';
+
     /**
      * known image mime types
      * @link https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
@@ -214,14 +218,14 @@ class Helper
      * Translates a string with underscores into camel case (e.g. first_name -> firstName)
      * @prototype string public static function toCamelCase(string $str[, bool $capitalise_first_char = false])
      * @param $str
-     * @param bool $upper_case_first_char
+     * @param bool $upperCaseFirstChar
      * @return mixed
      */
-    public static function toCamelCase($str, $upper_case_first_char = false)
+    public static function toCamelCase($str, $upperCaseFirstChar = false)
     {
         $str = self::strToLower($str);
 
-        if ($upper_case_first_char) {
+        if ($upperCaseFirstChar) {
             $str = self::ucfirst($str);
         }
 
@@ -244,6 +248,17 @@ class Helper
     }
 
     /**
+     * @param string $field
+     * @return mixed|string
+     */
+    public static function beautifyFieldName($field)
+    {
+        $str = self::toSnakeCase($field, ' ');
+
+        return strpos($str, '_') ? str_replace('_', ' ', $str) : $str;
+    }
+
+    /**
      * getValueOfArray 支持以 '.' 分割进行子级值获取 eg: 'goods.apple'
      * @param  array $array
      * @param  array|string $key
@@ -260,6 +275,10 @@ class Helper
             return $array[$key];
         }
 
+        if (!strpos($key, '.')) {
+            return $default;
+        }
+
         foreach (explode('.', $key) as $segment) {
             if (\is_array($array) && array_key_exists($segment, $array)) {
                 $array = $array[$segment];
@@ -272,7 +291,7 @@ class Helper
     }
 
     /**
-     * @param $cb
+     * @param callable $cb
      * @param array $args
      * @return mixed
      * @throws \InvalidArgumentException

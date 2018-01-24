@@ -106,12 +106,7 @@ class BeforeExecuteRoute extends Plugin
             $valdate = CommonHelper::callMethod($validate, 'validations', $this->getData());
             if ($valdate->fail()) {
                 foreach ($valdate->getErrors() as $error) {
-                    //$error_field = array_keys($error)[0];
-                    $error_msg   = array_values($error)[0];
-                    //$error_final = "{$error_field}:{$error_msg}";
-                    $error_final = "{$error_msg}";
-
-                    $err = Err::create(CoreLogic::INVALID_PARAM, [$error_final]);
+                    $err = Err::create(CoreLogic::INVALID_PARAM, [$error['msg']]);
                     ErrorHandle::throwErr($err);
                 }
             } else {

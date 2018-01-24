@@ -420,7 +420,7 @@
             "version": "1.9.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/endroid/QrCode.git",
+                "url": "https://github.com/endroid/qr-code.git",
                 "reference": "c9644bec2a9cc9318e98d1437de3c628dcd1ef93"
             },
             "dist": {
@@ -473,6 +473,7 @@
                 "qrcode",
                 "symfony"
             ],
+            "abandoned": "endroid/qr-code",
             "time": "2017-04-08T09:13:59+00:00"
         },
         {
@@ -1078,12 +1079,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/inhere/php-validate.git",
-                "reference": "e36ae2c062dbd48fa652513ba366e1e05e2cc0c2"
+                "reference": "0232052ca166a88f02c7a686e4955a303f3c5cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/inhere/php-validate/e36ae2c062dbd48fa652513ba366e1e05e2cc0c2.zip",
-                "reference": "e36ae2c062dbd48fa652513ba366e1e05e2cc0c2",
+                "url": "https://files.phpcomposer.com/files/inhere/php-validate/0232052ca166a88f02c7a686e4955a303f3c5cc3.zip",
+                "reference": "0232052ca166a88f02c7a686e4955a303f3c5cc3",
                 "shasum": ""
             },
             "require": {
@@ -1109,13 +1110,13 @@
                     "homepage": "http://www.yzone.net/"
                 }
             ],
-            "description": "a simple validate library of the php",
+            "description": "a simple validate, filter library of the php",
             "homepage": "http://github.com/inhere/php-validate",
             "keywords": [
                 "library",
                 "validate"
             ],
-            "time": "2017-11-30T08:02:04+00:00"
+            "time": "2018-01-13T05:29:47+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",

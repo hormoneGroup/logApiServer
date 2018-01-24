@@ -14,6 +14,10 @@ phalcon框架封装日志服务接口，上报日志数据，
 - phalcon(PHP框架)
 - SeasLog(日志扩展)
 
+## 安装篇
+```
+扩展安装参考我的doc项目安装步骤
+```
 
 ## 代码下载
 ```
@@ -85,8 +89,7 @@ critical (紧急情况、需要立刻进行修复、程序组件不可用)
 
 URL  |请求方式
 :---:|:---:
-http://dev.logApiServer.com/log/save
-| POST
+http://dev.logApiServer.com/log/save | POST
 
 #### 1.1.2. 参数说明
 

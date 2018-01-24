@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 use Inhere\Validate\FieldValidation;
 
 /**
- * @covers FieldValidation
+ * @covers \Inhere\Validate\FieldValidation
  */
 class FieldValidationTest extends TestCase
 {
@@ -42,12 +42,12 @@ class FieldValidationTest extends TestCase
             ])
            ->validate([], false);
 
-        $this->assertFalse($v->passed());
+        $this->assertFalse($v->isOk());
         $this->assertTrue($v->failed());
 
         $errors = $v->getErrors();
         $this->assertNotEmpty($errors);
-        $this->assertCount(4, $errors);
+        $this->assertCount(3, $errors);
 
         // var_dump($errors);
     }
