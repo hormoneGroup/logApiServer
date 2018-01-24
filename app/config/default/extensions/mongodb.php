@@ -8,7 +8,7 @@ return [
         'password' => '',
     ],
     'database'         => 'test',
-    'replica_set_name' => 'ztjybj',
+    'replica_set_name' => 'rep',
     'options'          => [
         'authMechanism'    => 'MONGODB-CR',
         'connectTimeoutMS' => 10000,

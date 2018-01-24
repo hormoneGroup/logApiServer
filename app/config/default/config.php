@@ -27,10 +27,4 @@ return [
 
     // system配置
     'system'       => require __DIR__. "/extensions/system.php",
-
-    // logic配置
-    'logic'        => require __DIR__. "/extensions/logic.php",
-
-    // mail配置
-    'mail'         => require __DIR__. "/extensions/mail.php",
 ];
