@@ -17,7 +17,7 @@ phalcon框架封装日志服务接口，上报日志数据，
 
 ## 代码下载
 ```
-git clone xxxx
+git clone https://github.com/hormoneGroup/logApiServer
 ```
 
 ## 虚拟域名配置
